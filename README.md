@@ -2,9 +2,9 @@
 ## About The Project
 | Step No.      | Step description        | 
 |-------------|:-------------|
-|  Bigger then 992px | ![Product Name Screen Shot](https://user-images.githubusercontent.com/45173800/232256709-7dbd9321-e7d1-435e-86f3-0e06bac1da05.png)|
+|  Bigger than 992px | ![Product Name Screen Shot](https://user-images.githubusercontent.com/45173800/232256709-7dbd9321-e7d1-435e-86f3-0e06bac1da05.png)|
 |  Between 992px and 769px |![Product Name Screen Shot](https://user-images.githubusercontent.com/45173800/232258039-3ebecc99-05f3-4a69-abbc-68230da718b5.png)|
-|  Smaller then 768px | ![Product Name Screen Shot](https://user-images.githubusercontent.com/45173800/232258072-70a050d1-4a6f-4f6a-8418-243b156f88d0.png)|
+|  Smaller than 768px | ![Product Name Screen Shot](https://user-images.githubusercontent.com/45173800/232258072-70a050d1-4a6f-4f6a-8418-243b156f88d0.png)|
  
 
 
