@@ -25,26 +25,38 @@ $todoArray = json_decode($json, true);
 </head>
 
 <body>
-    <form action="newtodo.php" method="post">
-        <input type="text" name="todo_name" id="todo_name" placeholder="Enter your todo" required>
-        <input type="submit" value="New todo">
-    </form>
-    <br>
+    <div class="h1-wrapper">
+        <h1>To do list Php</h1>
+    </div>
 
-    <?php foreach ($todoArray as $todoName => $todo) {?>
-    <div>
-        <form action="change_status.php" method="post" style="display: inline-block;">
-            <input type="hidden" name="todo_name" value="<?php echo $todoName?>">
-            <input type="checkbox" <?php echo $todo['completed']? 'checked':''?>>
-        </form>
-        <?php echo $todoName?>
-        <form action="delete.php" method="post" style="display: inline-block;">
-            <input type="hidden" name="todo_name" value="<?php echo $todoName?>">
-            <input type="submit" value="Delete">
+    <div class="todo-add-form-container">
+        <form action="newtodo.php" method="post">
+            <input type="text" name="todo_name" id="todo_name" placeholder="Enter your todo" required>
+            <input type="submit" value="Add new">
         </form>
     </div>
-    <?php }?>
+    <div class="row">
 
+        <?php foreach ($todoArray as $todoName => $todo) {?>
+        <div class="col-lg-4 col-md-6 col-sm-12 <?php echo $todo['completed']?'disabled':''?>">
+            <div class="topic-wrapper">
+                <form action="change_status.php" method="post" style="display: inline-block;">
+                    <input type="hidden" name="todo_name" value="<?php echo $todoName?>">
+                    <div class="topic-up"> <input type="checkbox" <?php echo $todo['completed']? 'checked':''?>></div>
+                </form>
+            </div>
+            <p><?php echo $todoName?></p>
+            <form action="delete.php" method="post" style="display: inline-block;">
+                <input type="hidden" name="todo_name" value="<?php echo $todoName?>">
+                <div class="delete-button-wrapper">
+                    <div class="topic-down"> <input type="image" src="img/trash-green.png" alt="Submit"
+                            style="width: 20px;" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <?php }?>
+    </div>
 </body>
 
 </html>
